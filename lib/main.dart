@@ -4,6 +4,8 @@ import './SecondPage.dart' as second;
 import './ThirdPage.dart' as third;
 import './FourthPage.dart' as fourth;
 
+Color roskildeOrange = const Color.fromARGB(255, 255, 115, 0);
+
 void main() {
   runApp(new MaterialApp(
     home: new MyTabs(),
@@ -34,7 +36,7 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return new Scaffold(
       bottomNavigationBar: new Material(
-          color: Colors.orange,
+          color: roskildeOrange,
           child: new TabBar(controller: controller, tabs: <Tab>[
             new Tab(icon: new Icon(Icons.map)),
             new Tab(icon: new Icon(Icons.list)),
