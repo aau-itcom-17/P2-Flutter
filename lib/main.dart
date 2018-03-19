@@ -34,9 +34,10 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-          title: new Text("Hej Lasse!"),
-          backgroundColor: Colors.black,
-          bottom: new TabBar(controller: controller, tabs: <Tab>[
+          title: new Text("Pages"), backgroundColor: Colors.orange),
+      bottomNavigationBar: new Material(
+          color: Colors.orange,
+          child: new TabBar(controller: controller, tabs: <Tab>[
             new Tab(icon: new Icon(Icons.map)),
             new Tab(icon: new Icon(Icons.list)),
             new Tab(icon: new Icon(Icons.favorite)),
@@ -49,7 +50,6 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
           new second.Second(),
           new third.Third(),
           new fourth.Fourth()
-
         ],
       ),
     );
